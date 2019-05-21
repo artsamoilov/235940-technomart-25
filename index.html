@@ -70,7 +70,7 @@
         <a href="map-popup.html" class="map-popup">
           <img src="img/map.jpg" width="300" height="158" alt="Санкт-Петербург, улица Большая Конюшенная, дом 19/8">
         </a>
-        <a class="button" href="feedback-popup.html">Заблудились? Напишите нам!</a>
+        <a class="button" href="write-popup.html">Заблудились? Напишите нам!</a>
       </section>
     </main>
 
@@ -123,7 +123,31 @@
       </div>
     </footer>
 
-<!-- Тут будет разметка попапов -->
+<!-- Попап с формой обратной связи -->
+    <section class="modal modal-write">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <form class="write-form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="write-label" for="write-name">Ваше имя:</label>
+        <input class="write-name" id="write-name" type="text" name="fullname" placeholder="Имя Фамилия">
+        <label class="write-label" for="write-email">Ваш e-mail:</label>
+        <input class="write-email" id="write-email" type="email" name="email" placeholder="email@example.com">
+        <label class="write-label" for="write-text">Текст письма:</label>
+        <textarea class="write-text" id="write-text" name="text" placeholder="В свободной форме"></textarea>
+      </form>
+      <p class="modal-button-container">
+        <button class="button" type="submit">Отправить</button>
+      </p>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
+
+<!-- Попап с картой -->
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+      <p>
+        <img src="img/map-full.jpg" width="940" height="446" alt="Офис компании находится по адресу: Санкт-Петербург, ул. Большая Конюшенная, 19/8">
+      </p>
+      <button class="modal-close" type="button">Закрыть</button>
+    </section>
 
   </body>
 </html>
