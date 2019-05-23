@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Техномарт</title>
+    <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
@@ -14,16 +17,16 @@
         </a>
         <!-- <span class="search">Поиск:</span> -->
         <form class="search">
-          <input class="search-field" type="text" placeholder="Поиск:">
-          <button class="search-icon" type="submit"></button>
+          <input class="search-field" type="search" placeholder="Поиск:">
+          <input class="search-icon visually-hidden" type="submit" value="Найти">
         </form>
-        <a href="bookmarks.html" class="header-bookmarks">
+        <a href="bookmarks.html" class="header-link header-bookmarks">
           <span class="bookmarks">Закладки: <span class="bookmarks-counter">0</span></span>
         </a>
-        <a href="cart.html" class="header-cart not-empty">
+        <a href="cart.html" class="header-link header-cart not-empty">
           <span class="cart">Корзина: <span class="cart-counter">10</span></span>
         </a>
-        <a href="checkout.html" class="header-checkout">
+        <a href="checkout.html" class="header-link header-checkout">
           <span class="checkout">Оформить заказ</span>
         </a>
       </div>
@@ -32,13 +35,13 @@
       <div class="header-middle">
         <p class="header-description">Интернет-магазин строительных материалов и инструментов для ремонта</p>
         <div class="header-contacts">
-          <span class="header-phone"><a href="tel:88125550555" class="header-phone-call">+7 (812) 555-05-55</a></span>
+          <span class="header-phone"><a href="tel:88125550555" class="header-phone-call">+7 (812) 555-05-55</a></span><br>
           <span class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </div>
         <div class="header-profile">
-          <span class="account-user">
-            <a href="profile.html">Равшан Джамшутович</a>
-            <a href="logout.html">Выход</a>
+          <span class="account-button">
+            <a href="profile.html" class="account-profile">Равшан Джамшутович</a>
+            <a href="logout.html" class="account-logout">Выход</a>
           </span>
           <span class="account-options">
             <a href="history.html">Мои заказы</a>
@@ -114,7 +117,7 @@
             </li>
           </ul>
         </fieldset>
-        <button class="filters-button" type="submit">Показать</a>
+        <button class="filters-button" type="submit">Показать</button>
       </section>
 
 <!-- Карточки товаров -->
@@ -338,10 +341,12 @@
 <!-- Попап с подтверждением добавления товара в корзину -->
     <section class="modal modal-success">
       <h2 class="modal-caption">Товар добавлен в корзину!</h2>
-      <p class="modal-button-container">
-        <button class="button" type="submit">Оформить заказ</button>
+      <div class="modal-button-container">
+        <a href="cart.html" class="button">
+          <span class="button-proceed">Оформить заказ</span>
+        </a>
         <button class="button-continue" type="button">Продолжить покупки</button>
-      </p>
+      </div>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
 
