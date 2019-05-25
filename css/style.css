@@ -1,0 +1,665 @@
+/* body > * {
+  background: rgba(255, 0, 0, 0.3);
+}
+
+body > * > * {
+  background: rgba(255, 255, 0, 0.3);
+}
+
+body > * > * > * {
+  background: rgba(0, 0, 255, 0.3);
+}
+
+body > * > * > * > * {
+  background: rgba(0, 255, 255, 0.3);
+} */
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding:0 !important;
+  border:0 !important;
+  height: 1px !important; 
+  width: 1px !important; 
+  overflow: hidden;
+}
+
+/* Стили первого уровня меню */
+
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: "PT Sans", Tahoma, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  background-color: #f4f7f9;
+}
+
+.header-top {
+  background-color: #293449;
+  color: #ffffff;
+}
+
+.logo {
+  background-color: #ee3643;
+  box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+  text-align: center;
+}
+
+.logo:hover,
+.logo:focus {
+  background-color: #ca2c37;
+}
+
+.logo:active {
+  background-color: #ba2732;
+}
+
+.header-logo {
+  width: 220px;
+  height: 47px;
+}
+.search-field {
+  font: inherit;
+  background: #293449;
+  border: none;
+}
+
+.search-field:hover {
+  background-color: #212a3a;
+}
+
+.search-field:focus,
+.search-field:active {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.header-link {
+  font: inherit;
+  color: #ffffff;
+}
+
+.header-link:hover,
+.header-link:focus {
+  background-color: #212a3a;
+}
+
+.header-link:active {
+  background-color: #161d29;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.header-checkout {
+  background-color: #63a63e;
+}
+
+.header-checkout:hover,
+.header-checkout:focus {
+  background-color: #5fbb2d;
+}
+
+.header-checkout:active {
+  background-color: #518534;
+}
+
+/* Второй уровень меню */
+
+.header-description {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 23px;
+  color: #ee3643;
+}
+
+.header-phone {
+  text-align: center;
+  border: 3px solid #ffffff;
+}
+
+.header-phone-call {
+  font-size: 21px;
+  line-height: 21px;
+  color: #e9292a;
+}
+
+.header-phone-call:hover,
+.header-phone-call:focus {
+  color: #ca2c37;
+}
+
+.header-phone-call:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.header-address {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+}
+
+/* Разметка кнопок личного кабинета */
+.account-button {
+  font-size: 21px;
+  line-height: 21px;
+  background-color: #ffffff;
+}
+
+.account-button span {
+  color: #000000;
+}
+
+.account-button span:hover,
+.account-button span:focus {
+  color: #EE3643;
+}
+
+.account-button span:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.account-options a {
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: underline;
+  color: #32425c;
+}
+
+.account-options a:hover,
+.account-options a:focus {
+  color: #ee3643;
+}
+
+.account-options a:active {
+  color: rgba(50, 66, 92, 0.3);
+}
+
+/* Навигация */
+
+.header-navigation {
+  font-size: 17px;
+  line-height: 17px;
+  box-shadow: inset 0px -5px 0 0 #293449;
+  background-color: #32425c;
+}
+
+.header-navigation-items {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.header-navigation-items a {
+  color: #ffffff;
+}
+
+.header-navigation-items a:hover,
+.header-navigation-items a:focus {
+  background-color: #293449;
+}
+
+.header-navigation-items a:active {
+  background-color: #1d2739;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Основной контент */
+
+.section-header {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+
+  text-transform: uppercase;
+}
+
+.breadcrumbs {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.breadcrumbs a,
+.breadcrumbs-current {
+  font: inherit;
+  color: #000000;
+  font-size: 13px;
+  line-height: 18px;
+
+  text-transform: uppercase;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  color: #ee3643;
+}
+
+.breadcrumbs a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.inner-heading {
+  background-color: #f2f6f8;
+  color: #32425c;
+  
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+
+  text-transform: uppercase;
+}
+
+.filter-heading {
+  font-family: "PT Sans", Tahoma, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  color: #000000;
+  background-color: #f7f3ec;
+}
+
+.about-delivery-companies {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.button {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  text-transform: uppercase;
+
+  background-color: #ee3643;
+  color: #ffffff;
+
+  border: none;
+  border-radius: 4px;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #ca2c37;
+}
+
+.button:active {
+  background-color: #ba2732;
+}
+
+fieldset {
+  border: none;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "PT Sans", Tahoma, sans-serif;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+legend {
+  border-top: 1px solid #e5e5e5;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: 700;
+}
+
+.filter {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.filter-option:disabled {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.filter-button {
+  font: inherit;
+  font-size: 13px;
+  line-height: 18px;
+  color: #000000;
+
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+
+  border-radius: 4px;
+}
+
+.filter-button:hover,
+.filter-button:focus {
+  background-color: #ffffff;
+  border: 1px solid #bdc6ca;
+}
+
+.filter-button:active {
+  background-color: #ffffff;
+  border: 1px solid #ee3643;
+}
+
+.pagination-current,
+.pagination-current:hover,
+.pagination-current:focus,
+.pagination-current:active {
+  border: none;
+  background-color: #ee3643;
+  color: #ffffff;
+}
+
+.pagination-list {
+  list-style: none;
+
+  text-transform: uppercase;
+
+  margin: 0;
+  padding: 0;
+}
+
+/* Карточки товара */
+
+.catalog-list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-item {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.catalog-item a {
+  font-family: "PT Sans", Tahoma, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.catalog-item a:hover,
+.catalog-item a:focus {
+  color: #ee3643;
+}
+
+.catalog-item a:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-item-price {
+  font-family: "PT Sans", Tahoma, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+}
+
+.price-old {
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.price-new {
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.catalog-item-buttons {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+}
+
+.button.catalog-item-button-buy {
+  font:inherit;
+  color: #ffffff;
+
+  box-shadow: inset 0px -3px 0 0 #367315;
+  background-color: #63a63e;
+  border-radius: 4px;
+}
+
+.button.catalog-item-button-buy:hover,
+.button.catalog-item-button-buy:focus {
+  background-color: #5fbb2d;
+  color: #ffffff;
+}
+
+.button.catalog-item-button-buy:focus {
+  background-color: #518534;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.button.catalog-item-button-bookmark {
+  font:inherit;
+  color: #32425c;
+
+  background: none;
+  border: 3px solid #63a63e;
+}
+
+.button.catalog-item-button-bookmark:hover,
+.button.catalog-item-button-bookmark:focus {
+  color: #32425c;
+
+  background: none;
+  border: 3px solid #32425c;
+}
+
+.button.catalog-item-button-bookmark:active {
+  color: rgba(50, 66, 92, 0.3);
+
+  background: none;
+  border: 3px solid rgba(50, 66, 92, 0.3);
+}
+
+.label-new {
+  background-image: url("img/new-flag.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.catalog-article {
+  background-color: #f4f7f9;
+}
+
+/* Стилизация подвала */
+
+.footer {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.footer-logo {
+  width: 220px;
+  height: 68px;
+}
+
+.footer-top {
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #ffffff;
+  background-color: #32425c;
+}
+
+.footer-navigation-items {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.footer-navigation-items a {
+  color: #ffffff;
+}
+
+.footer-navigation-items a:hover,
+.footer-navigation-items a:focus {
+  text-decoration: underline;
+}
+
+.footer-navigation-items a:active {
+  opacity: 0.5;
+}
+
+.footer-links {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links a,
+.footer-bottom-link {
+  color: #ffd180;
+}
+
+.footer-links a:hover,
+.footer-links a:focus,
+.footer-bottom-link:hover,
+.footer-bottom-link:focus {
+  text-decoration: underline;
+}
+
+.footer-links a:active {
+  opacity: 0.5;
+}
+
+.footer-bottom-link:active {
+  color: #ee3643;
+}
+
+.footer-bottom {
+  background-color: #293449;
+  color: #ffffff;
+
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.footer-social {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.social-button {
+  background-color: #212a3a;
+  color: #ffffff;
+}
+
+.social-button:hover,
+.social-button:focus,
+.social-button:active {
+  background-color: #ee3643;
+}
+
+/* Стилизация модальных окон */
+
+.modal {
+  background-color: #ffffff;
+  box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
+}
+
+.modal-write {
+  width: 620px;
+  /* height: 430px; */
+
+  border-top: 7px solid #FF5357;
+}
+
+.write-label {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+}
+
+.write-field {
+  border: solid 2px #d7dcde;
+  border-radius: 4px;
+
+  font: inherit;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.write-field:hover {
+  border: solid 2px #b5b5b5;
+}
+
+.write-field:focus,
+.write-field:active {
+  border: solid 2px #ee3643;
+}
+
+.modal-button-container {
+  background-color: #f4f4f4;
+}
+
+.button-continue {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.button-continue:hover,
+.button-continue:focus {
+  background-color: #ffffff;
+  color: #ee3643;
+}
+
+.button-continue:active {
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.3);
+}

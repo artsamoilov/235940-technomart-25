@@ -12,7 +12,7 @@
 <!-- Первый уровень меню -->
     <header class="header">
       <div class="header-top">
-        <a href="index.html" class="header-logo">
+        <a href="index.html" class="logo header-logo">
           <img src="img/logo.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»">
         </a>
         <!-- <span class="search">Поиск:</span> -->
@@ -85,43 +85,43 @@
         <!-- Тут позже будет фильтрация по цене -->
         <fieldset>
           <legend>Производители:</legend>
-          <ul>
+          <ul class="filter">
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
+              <input class="filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
               <label for="filter-bosch">Bosch</label>
             </li>
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol">
+              <input class="filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol">
               <label for="filter-interskol">Интерскол</label>
             </li>
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
+              <input class="filter-input filter-input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
               <label for="filter-makita">Makita</label>
             </li>
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
+              <input class="filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
               <label for="filter-dewalt">Dewalt</label>
             </li>
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="filter-hitachi">
+              <input class="filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="filter-hitachi">
               <label for="filter-hitachi">Hitachi</label>
             </li>
           </ul>
         </fieldset>
         <fieldset>
           <legend>Питание:</legend>
-          <ul>
+          <ul class="filter">
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-radio" type="radio" name="supply-type" value="battery" id="filter-battery">
+              <input class="filter-input filter-input-radio" type="radio" name="supply-type" value="battery" id="filter-battery">
               <label for="filter-battery">Аккумуляторные</label>
             </li>
             <li class="filter-option">
-              <input class="visually-hidden filter-input filter-input-radio" type="radio" name="supply-type" value="wire" id="filter-wire">
+              <input class="filter-input filter-input-radio" type="radio" name="supply-type" value="wire" id="filter-wire">
               <label for="filter-wire">Сетевые</label>
             </li>
           </ul>
         </fieldset>
-        <button class="filters-button" type="submit">Показать</button>
+        <button class="button filter-button" type="submit">Показать</button>
       </section>
 
 <!-- Карточки товаров -->
@@ -162,19 +162,16 @@
               <span class="price-new">25500 ₽</span>
             </p>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item label-new">
             <h3>
               <a href="#">
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-item-title">BFG 2000</span>
               </a>
             </h3>
-            <div class="label-new">
-              <p>new</p>
-            </div>
             <p class="catalog-item-buttons">
-              <a class="catalog-item-buttons-buy" href="#">Купить</a>
-              <a class="catalog-item-buttons-bookmark" href="#">В закладки</a>
+              <a class="button catalog-item-button-buy" href="#">Купить</a>
+              <button class="button catalog-item-button-bookmark" href="#">В закладки</button>
             </p>
             <p class="catalog-item-price">
               <span class="price-old"></span>
@@ -198,16 +195,13 @@
               <span class="price-new">15500 ₽</span>
             </p>
           </li>
-          <li class="catalog-item">
+          <li class="catalog-item label-new">
             <h3>
               <a href="#">
                 <span class="catalog-category">Перфоратор BOSCH</span>
                 <span class="catalog-item-title">BFG 6000</span>
               </a>
             </h3>
-            <div class="label-new">
-              <p>new</p>
-            </div>
             <p class="catalog-item-image">
               <a href="#">
                 <img src="img/bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
@@ -242,9 +236,7 @@
                 <span class="catalog-item-title">BFG 3000</span>
               </a>
             </h3>
-            <div class="label-new">
-              <p>new</p>
-            </div>
+            <div class="label-new"></div>
             <p class="catalog-item-image">
               <a href="#">
                 <img src="img/bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
@@ -291,13 +283,13 @@
           </li>
         </ul>
         <ul class="pagination-list">
-          <li class="pagination-item pagination-item-current"><a>1</a></li>
-          <li class="pagination-item"><a href="#">2</a></li>
-          <li class="pagination-item"><a href="#">3</a></li>
-          <li class="pagination-item"><a href="#">Следующая</a></li>
+          <li><a class="filter-button pagination-current">1</a></li>
+          <li><a class="filter-button" href="#">2</a></li>
+          <li><a class="filter-button" href="#">3</a></li>
+          <li><a class="filter-button" href="#">Следующая</a></li>
         </ul>
       </section>
-      <article>
+      <article class="catalog-article">
         <h2 class="section-header">Пара слов о перфораторах</h2>
         <p>
           Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
@@ -309,7 +301,7 @@
 <!-- Подвал сайта -->
     <footer class="footer">
       <div class="footer-top">
-        <a href="index.html" class="footer-logo">
+        <a href="index.html" class="logo footer-logo">
           <img src="img/logo.svg" width="138" height="23" alt="Логотип интернет-магазина «Техномарт»">
         </a>
         <nav class="footer-navigation">
@@ -337,13 +329,11 @@
           © 2010–2019 Компания «Техномарт»<br>
           Все права защищены
         </p>
-        <div class="footer-social">
-          <ul>
-            <li><a class="social-button" href="vk.com">Вконтакте</a></li>
-            <li><a class="social-button" href="facebook.com">Фейсбук</a></li>
-            <li><a class="social-button" href="instagram.com">Инстаграм</a></li>
-          </ul>
-        </div>
+        <ul class="footer-social">
+          <li><a class="social-button" href="vk.com">Вконтакте</a></li>
+          <li><a class="social-button" href="facebook.com">Фейсбук</a></li>
+          <li><a class="social-button" href="instagram.com">Инстаграм</a></li>
+        </ul>
         <p class="footer-mailto">
           Обратная связь:<br>
           <a class="footer-bottom-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
@@ -362,7 +352,7 @@
         <a href="cart.html" class="button">
           <span class="button-proceed">Оформить заказ</span>
         </a>
-        <button class="button-continue" type="button">Продолжить покупки</button>
+        <button class="button button-continue" type="button">Продолжить покупки</button>
       </div>
       <button class="modal-close" type="button">Закрыть</button>
     </section>
