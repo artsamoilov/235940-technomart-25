@@ -119,6 +119,10 @@ a {
   background-color: #63a63e;
 }
 
+.not-empty {
+  background-color: #ee3643;
+}
+
 .header-checkout:hover,
 .header-checkout:focus {
   background-color: #5fbb2d;
