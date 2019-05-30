@@ -101,6 +101,12 @@ html {
   margin-bottom: 20px;
 }
 
+.wrapper {
+  display: flex;
+  width: 960px;
+  padding: 0 10px;
+}
+
 .wrapper-column {
   display: flex;
   flex-direction: column;
@@ -291,7 +297,7 @@ html {
   position: relative;
 }
 
-.catalog-item:hover .catalog-item-buttons{
+.catalog-item:hover .catalog-item-buttons {
   opacity: 1;
 }
 
