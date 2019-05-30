@@ -1,0 +1,308 @@
+/* Стили первого уровня меню */
+
+body {
+  padding: 0;
+  margin: 0;
+
+  font-family: "PT Sans", Tahoma, sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  font: inherit;
+  color: inherit;
+}
+
+.header {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  background-color: #f4f7f9;
+}
+
+.header-top {
+  display: flex;
+  justify-content: center;
+
+  height: 42px;
+
+  background-color: #293449;
+  color: #ffffff;
+
+  margin-bottom: 46px;
+}
+
+.wrapper {
+  display: flex;
+  width: 960px;
+  padding: 0 10px;
+}
+
+.logo {
+  background-color: #ee3643;
+  box-shadow: inset 0 -5px 0 0 rgba(0, 0, 0, 0.24);
+  text-align: center;
+}
+
+.logo:hover,
+.logo:focus {
+  background-color: #ca2c37;
+}
+
+.logo:active {
+  background-color: #ba2732;
+}
+
+.header-logo {
+  width: 220px;
+  height: 47px;
+
+  justify-content: center;
+}
+
+.search-field {
+  height: 42px;
+  width: 270px;
+  padding-left: 18px;
+
+  font: inherit;
+  background: #293449;
+  border: none;
+}
+
+.search-field:hover {
+  background-color: #212a3a;
+}
+
+.search-field:focus,
+.search-field:active {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.header-link {
+  width: 150px;
+  padding-left: 18px;
+
+  color: #ffffff;
+}
+
+.header-link:hover,
+.header-link:focus {
+  background-color: #212a3a;
+}
+
+.header-link:active {
+  background-color: #161d29;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.header-top a {
+  display: flex;
+  align-items: center;
+}
+
+.header-link.header-checkout {
+  padding: 0;
+  justify-content: center;
+}
+
+.header-checkout {
+  background-color: #63a63e;
+}
+
+.not-empty {
+  background-color: #ee3643;
+}
+
+.header-checkout:hover,
+.header-checkout:focus {
+  background-color: #5fbb2d;
+}
+
+.header-checkout:active {
+  background-color: #518534;
+}
+
+/* Второй уровень меню */
+
+.container-center {
+  display: flex;
+  justify-content: center;
+}
+
+.container-section {
+  padding-top: 80px;
+  padding-bottom: 86px;
+}
+
+.container-section .wrapper {
+  justify-content: space-between;
+}
+
+.header-background {
+  background-color: #f4f7f9;
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 60px;
+}
+
+.header-middle {
+  margin-bottom: 40px;
+  justify-content: space-between;
+}
+
+.header-description {
+  font-size: 16px;
+  font-style: italic;
+  line-height: 23px;
+  color: #ee3643;
+
+  width: 220px;
+
+  padding: 0;
+  margin: 0;
+  margin-left: 50px;
+}
+
+.header-contacts {
+  width: 270px;
+
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.header-phone {
+  text-align: center;
+  font-size: 21px;
+  line-height: 21px;
+  color: #e9292a;
+  
+  border: 3px solid #ffffff;
+  padding: 9px;
+}
+
+.header-phone:hover,
+.header-phone:focus {
+  color: #ca2c37;
+}
+
+.header-phone:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.header-address {
+  font-size: 14px;
+  line-height: 24px;
+  color: #32425c;
+
+  margin-top: 4px;
+}
+
+.header-profile {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  width: 310px;
+}
+
+.account-button {
+  font-size: 21px;
+  line-height: 21px;
+  background-color: #ffffff;
+
+  padding: 12px 24px;
+  margin-left: 10px;
+
+  color: #000000;
+}
+
+.account-button:hover,
+.account-button:focus {
+  color: #EE3643;
+}
+
+.account-button:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.logged-in {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+.account-logout {
+  padding-right: auto;
+}
+
+.account-options {
+  margin-top: 4px;
+  margin-left: 16px;
+}
+
+.account-options a {
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: underline;
+  color: #32425c;
+  margin: 0 14px;
+}
+
+.account-options a:hover,
+.account-options a:focus {
+  color: #ee3643;
+}
+
+.account-options a:active {
+  color: rgba(50, 66, 92, 0.3);
+}
+
+/* Навигация */
+
+.header-navigation {
+  font-size: 17px;
+  line-height: 17px;
+  box-shadow: inset 0px -5px 0 0 #293449;
+  background-color: #32425c;
+
+  width: 940px;
+  min-height: 60px;
+}
+
+.header-navigation-items {
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+  margin: 0 auto;
+}
+
+.header-navigation-items a {
+  color: #ffffff;
+  padding: 20px 30px;
+}
+
+.header-navigation-items a:hover,
+.header-navigation-items a:focus {
+  background-color: #293449;
+}
+
+.header-navigation-items a:active {
+  background-color: #1d2739;
+  color: rgba(255, 255, 255, 0.5);
+}

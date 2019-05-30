@@ -1,0 +1,153 @@
+/* Стилизация подвала */
+
+.footer {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  background-color: #32425c;
+}
+
+.footer-logo {
+  width: 220px;
+  height: 68px;
+  padding: auto 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  
+  font-size: 18px;
+  line-height: 24px;
+
+  color: #ffffff;
+}
+
+.footer-top .wrapper {
+  justify-content: space-between;
+}
+
+.footer-navigation-items {
+  list-style: none;
+
+  display: flex;
+  justify-content: flex-end;
+
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  width: 700px;
+}
+
+.footer-navigation-items a {
+  color: #ffffff;
+  margin-left: 60px;
+}
+
+.footer-navigation-items a:hover,
+.footer-navigation-items a:focus {
+  text-decoration: underline;
+}
+
+.footer-navigation-items a:active {
+  opacity: 0.5;
+}
+
+.footer-contacts {
+  width: 380px;
+  margin: 0;
+  margin-top: 40px;
+}
+
+.footer-links {
+  list-style: none;
+
+  display: flex;
+  justify-content: flex-end;
+
+
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  width: 540px;
+}
+
+.footer-links a {
+  margin-left: 60px;
+}
+
+.footer-links a,
+.footer-bottom-link {
+  color: #ffd180;
+}
+
+.footer-links a:hover,
+.footer-links a:focus,
+.footer-bottom-link:hover,
+.footer-bottom-link:focus {
+  text-decoration: underline;
+}
+
+.footer-links a:active {
+  opacity: 0.5;
+}
+
+.footer-bottom-link:active {
+  color: #ee3643;
+}
+
+.footer-bottom {
+  background-color: #293449;
+  color: #ffffff;
+
+  font-size: 16px;
+  line-height: 18px;
+
+  padding: 20px 0;
+  margin-top: 50px;
+}
+
+.footer-copyright {
+  width: 380px;
+  margin-right: 10px;
+}
+
+.footer-social {
+  display: flex;
+
+  list-style: none;
+
+  padding: 0;
+  margin: auto 0;
+}
+
+.social-button {
+  display: inline-block;
+
+  background-color: #212a3a;
+  color: #ffffff;
+
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+
+  margin-right: 4px;
+}
+
+.social-button:hover,
+.social-button:focus,
+.social-button:active {
+  background-color: #ee3643;
+}
+
+.footer-mailto {
+  margin-right: 50px;
+  margin-left: auto;
+}
+
+.footer-developer {
+  margin-right: 15px;
+}
