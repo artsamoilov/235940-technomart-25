@@ -103,6 +103,8 @@ html {
   display: flex;
   width: 960px;
   padding: 0 10px;
+
+  position: relative;
 }
 
 .wrapper-column {
