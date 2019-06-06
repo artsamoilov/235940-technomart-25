@@ -7,7 +7,6 @@ body {
   font-family: "PT Sans", Tahoma, sans-serif;
   font-size: 13px;
   line-height: 24px;
-  font-weight: 400;
   color: #000000;
 
   background-color: #ffffff;
@@ -23,7 +22,6 @@ a {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
-  font-weight: 400;
   background-color: #f4f7f9;
 }
 

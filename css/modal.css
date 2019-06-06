@@ -36,7 +36,6 @@
 
 .write-label {
   font-family: "Cuprum", Arial, sans-serif;
-  font-weight: 400;
   font-size: 18px;
   line-height: 18px;
   padding-bottom: 8px;
@@ -106,7 +105,6 @@
 
 .modal-caption {
   font-family: "Cuprum", Arial, sans-serif;
-  font-weight: 400;
   font-size: 30px;
   line-height: 30px;
   text-align: center;
