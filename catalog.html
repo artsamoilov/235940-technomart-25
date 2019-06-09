@@ -10,27 +10,39 @@
   <body>
 
 <!-- Первый уровень меню -->
-    <header class="header">
-      <div class="header-top">
-        <div class="wrapper">
-          <a href="index.html" class="logo header-logo">
-            <img src="img/logo.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»">
-          </a>
-          <form class="search" action="search.html" method="get">
-            <input class="search-field" type="search" placeholder="Поиск:">
-            <input class="search-icon visually-hidden" type="submit" value="Найти">
-          </form>
-          <a href="bookmarks.html" class="header-link header-bookmarks">
-            <span class="bookmarks">Закладки: <span class="bookmarks-counter">0</span></span>
-          </a>
-          <a href="cart.html" class="header-link header-cart not-empty">
-            <span class="cart">Корзина: <span class="cart-counter">10</span></span>
-          </a>
-          <a href="checkout.html" class="header-link header-checkout">
-            <span class="checkout">Оформить заказ</span>
-          </a>
-        </div>
+  <header class="header">
+    <div class="header-top">
+      <div class="wrapper">
+        <a href="index.html" class="logo header-logo">
+          <img src="img/logo.svg" width="108" height="18" alt="Логотип интернет-магазина «Техномарт»">
+        </a>
+        <form class="search" action="search.html" method="get">
+          <input class="search-field" type="search" placeholder="Поиск:" required>
+          <input class="search-icon" type="submit" value="">
+        </form>
+        <a href="bookmarks.html" class="header-link header-bookmarks">
+          <span class="header-icon header-icon-bookmarks">
+            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              width="14px" height="16px" viewBox="0 0 14 16" enable-background="new 0 0 14 16" xml:space="preserve">
+            <path fill="#E72C2D" d="M14,15c0,0.55-0.368,0.741-0.818,0.426l-5.363-3.765c-0.45-0.315-1.187-0.315-1.637,0l-5.364,3.765
+             C0.368,15.741,0,15.55,0,15V1c0-0.55,0.45-1,1-1h12c0.55,0,1,0.45,1,1V15z"/>
+            </svg>
+          </span>
+          <span class="bookmarks">Закладки: <span class="bookmarks-counter">0</span></span>
+        </a>
+        <a href="cart.html" class="header-link header-cart not-empty">
+          <span class="header-icon header-icon-cart">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#ffffff" d="M4.07 2H15V6.951L9.441 9H15V11H4.016L2.031 2H0V0H3.648L4.07 2ZM4.5 15C5.32843 15 6 14.3284 6 13.5C6 12.6716 5.32843 12 4.5 12C3.67157 12 3 12.6716 3 13.5C3 14.3284 3.67157 15 4.5 15ZM12.5 15C13.3284 15 14 14.3284 14 13.5C14 12.6716 13.3284 12 12.5 12C11.6716 12 11 12.6716 11 13.5C11 14.3284 11.6716 15 12.5 15Z" fill="black"/>
+            </svg>
+          </span>
+          <span class="cart">Корзина: <span class="cart-counter">10</span></span>
+        </a>
+        <a href="checkout.html" class="header-link header-checkout">
+          <span class="checkout">Оформить заказ</span>
+        </a>
       </div>
+    </div>
 
 <!-- Второй уровень меню -->
       <div class="header-middle wrapper">
@@ -40,12 +52,12 @@
           <span class="header-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
         </div>
         <div class="header-profile logged-in">
-          <a class="account-button" href="logout.html">
-            <span class="account-logout">Равшан Джамшутович</span>
+          <a class="account-button account-button-logout" href="logout.html">
+            <span class="account account-logout">Равшан Джамшутович</span>
           </a>
           <div class="account-options">
-            <a href="history.html">Мои заказы</a>
-            <a href="profile.html">Личный кабинет</a>
+            <a class="account-option-link" href="history.html">Мои заказы</a>
+            <a class="account-option-link" href="profile.html">Личный кабинет</a>
           </div>
         </div>
       </div>
@@ -71,7 +83,20 @@
       <h1 class="visually-hidden">Каталог</h1>
       <div class="wrapper">
         <ul class="breadcrumbs-list">
-          <li><a class="breadcrumb breadcrumb-home" href="index.html">Главная</a></li>
+          <li>
+            <a class="breadcrumb breadcrumb-home" href="index.html">
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="15px" height="12px" viewBox="0 0 15 12" enable-background="new 0 0 15 12" xml:space="preserve">
+              <polygon fill="#C1C6CE" points="3,8 3,12 7,12 7,8 9,8 9,12 13,12 13,8 8,3.516 	"/>
+              <path fill="#C1C6CE" d="M14.831,6.365L13,4.751V0h-2v2.987L8.332,0.635c-0.02-0.017-0.043-0.023-0.064-0.037
+                c-0.026-0.018-0.052-0.035-0.08-0.047C8.156,0.539,8.125,0.533,8.093,0.527C8.062,0.521,8.032,0.515,8,0.515
+                c-0.031,0-0.061,0.006-0.092,0.012C7.875,0.533,7.845,0.539,7.813,0.552C7.785,0.563,7.76,0.581,7.733,0.598
+                c-0.021,0.014-0.045,0.02-0.064,0.037l-6.498,5.73C0.964,6.548,0.944,6.864,1.126,7.071C1.225,7.183,1.363,7.24,1.501,7.24
+                c0.118,0,0.236-0.041,0.331-0.125L8,1.677l6.169,5.438C14.265,7.199,14.383,7.24,14.5,7.24c0.139,0,0.276-0.058,0.375-0.169
+                C15.058,6.864,15.038,6.548,14.831,6.365z"/>
+              </svg>
+            </a>
+          </li>
           <li><a class="breadcrumb" href="catalog.html">Каталог</a></li>
           <li><a class="breadcrumb" href="tools.html">Инструмент</a></li>
           <li><a class="breadcrumb-current">Перфораторы</a></li>
@@ -91,23 +116,23 @@
             <legend class="filter-input-group">Производители:</legend>
             <ul class="filter">
               <li class="filter-option">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="bosch" id="filter-bosch" checked>
+                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="bosch" id="filter-bosch" checked>
                 <label for="filter-bosch">Bosch</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="interskol" id="filter-interskol">
+                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="interskol" id="filter-interskol">
                 <label for="filter-interskol">Интерскол</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="makita" id="filter-makita" checked>
+                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="makita" id="filter-makita" checked>
                 <label for="filter-makita">Makita</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="dewalt" id="filter-dewalt">
+                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="dewalt" id="filter-dewalt">
                 <label for="filter-dewalt">Dewalt</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input-checkbox" type="checkbox" name="hitachi" id="filter-hitachi">
+                <input class="filter-input filter-input-checkbox visually-hidden" type="checkbox" name="hitachi" id="filter-hitachi">
                 <label for="filter-hitachi">Hitachi</label>
               </li>
             </ul>
@@ -116,11 +141,11 @@
             <legend class="filter-input-group">Питание:</legend>
             <ul class="filter">
               <li class="filter-option">
-                <input class="filter-input filter-input-radio" type="radio" name="supply-type" value="battery" id="filter-battery">
+                <input class="filter-input filter-input-radio visually-hidden" type="radio" name="supply-type" value="battery" id="filter-battery">
                 <label for="filter-battery">Аккумуляторные</label>
               </li>
               <li class="filter-option">
-                <input class="filter-input filter-input-radio" type="radio" name="supply-type" value="wire" id="filter-wire">
+                <input class="filter-input filter-input-radio visually-hidden" type="radio" name="supply-type" value="wire" id="filter-wire">
                 <label for="filter-wire">Сетевые</label>
               </li>
             </ul>
