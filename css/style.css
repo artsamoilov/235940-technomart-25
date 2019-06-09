@@ -304,12 +304,15 @@ a {
   list-style: none;
 
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
 
   padding: 0;
   margin: 0 auto;
+}
+
+.header-navigation-items li {
+  padding: 21px 0;
 }
 
 .header-navigation-items a {
