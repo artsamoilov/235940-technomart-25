@@ -901,7 +901,9 @@ a {
 }
 
 .social-button {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   background-color: #212a3a;
 
