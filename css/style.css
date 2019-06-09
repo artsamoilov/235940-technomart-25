@@ -657,9 +657,26 @@ a {
 }
 
 .price-new {
+  position: relative;
+
   color: #ffffff;
   background-color: #ee3643;
-  padding: 10px 16px 10px 36px;
+  padding: 10px 36px 10px 36px;
+  border-radius: 4px;
+}
+
+.price-new:after {
+  content: "";
+  
+  position: absolute;
+  top: 0;
+  right: -24px;
+  
+  width: 0;
+  height: 0;
+  
+  border: 19px solid white;
+  border-left-color: #ee3643;
 }
 
 .catalog-item-buttons {
