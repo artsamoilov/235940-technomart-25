@@ -1263,12 +1263,60 @@ a {
 
   margin: 0 auto;
   position: relative;
+  /* position: fixed;
+
+  top: 50vh;
+  left: 50vw; */
 }
 
 .modal-close {
   position: absolute;
   top: 9px;
   right: 9px;
+
+  font-size: 0;
+
+  width: 21px;
+  height: 21px;
+
+  border: none;
+  background: none;
+
+  cursor: pointer;
+}
+
+.modal-close::before,
+.modal-close::after {
+  content: "";
+  position: absolute;
+
+  height: 4px;
+  width: 27px;
+
+  top: 8px;
+  right: -3px;
+  background-color: #ee3643;
+  border-radius: 1px;
+}
+
+.modal-close::before {
+  transform: rotate(45deg);
+}
+
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close:hover::before,
+.modal-close:hover::after,
+.modal-close:focus::before,
+.modal-close:focus::after {
+  background-color: #ca2c37;
+}
+
+.modal-close:active::before,
+.modal-close:active::after {
+  background-color: #ba2732;
 }
 
 .modal-container {
