@@ -939,7 +939,6 @@ a {
 
 .catalog-list {
   display: flex;
-  flex-wrap: wrap;
 
   width: 700px;
 
@@ -950,6 +949,13 @@ a {
   padding-bottom: 32px;
 }
 
+.catalog-list-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-left: -20px;
+}
+
 .catalog-item {
   background-color: #ffffff;
   border: 1px solid #e5e5e5;
@@ -957,15 +963,11 @@ a {
 
   width: 220px;
   margin-bottom: 20px;
-  margin-right: 20px;
+  margin-left: 20px;
 
   text-align: center;
 
   position: relative;
-}
-
-.catalog-item:nth-child(3n) {
-  margin-right: 0;
 }
 
 .catalog-item:hover .catalog-item-buttons {
