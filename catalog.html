@@ -81,6 +81,8 @@
 <!-- Основной контент страницы -->
     <main>
       <h1 class="visually-hidden">Каталог</h1>
+
+<!-- Хлебные крошки -->
       <div class="wrapper">
         <ul class="breadcrumbs-list">
           <li>
@@ -110,7 +112,7 @@
 
       <div class="wrapper">
         <section class="filters">
-          <h2 class="filter-heading">Фильтр:</h2>
+          <h2 class="filter-heading filter-heading-bg">Фильтр:</h2>
           <!-- Тут позже будет фильтрация по цене -->
           <fieldset class="filter-fieldset">
             <legend class="filter-input-group">Производители:</legend>
@@ -155,12 +157,36 @@
 
         
 
-  <!-- Карточки товаров -->
+<!-- Каталог -->
         <section class="catalog">
-          <div>
-            <h2 class="filter-heading sorting">Сортировка:</h2>
-            <!-- Тут позже будет сортировка -->
+
+<!-- Сортировка -->
+          <div class="filter-heading-bg">
+            <h2 class="filter-heading">Сортировка:</h2>
+            <ul class="sorting-list sorting-items-list">
+              <li><a class="sorting-item sorting-item-current">По цене</a></li>
+              <li><a href="sorting-by-type.html" class="sorting-item">По типу</a></li>
+              <li><a href="sorting-by-function.html" class="sorting-item">По функционалу</a></li>
+            </ul>
+            <ul class="sorting-list sorting-direction-list">
+              <li>
+                <a class="sorting-direction sorting-direction-up sorting-direction-current">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="sorting-down.html" class="sorting-direction sorting-direction-down">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#231F20" d="M5.5 10L0 0h11"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
           </div>
+
+<!-- Карточки товаров -->
           <h2 class="visually-hidden">Список товаров</h2>
           <ul class="catalog-list">
             <li class="catalog-item flex-container-column">
@@ -338,6 +364,8 @@
               </p>
             </li>
           </ul>
+
+<!-- Пагинация -->
           <ul class="pagination-list">
             <li><a class="filter-button pagination-current">1</a></li>
             <li><a class="filter-button" href="catalog-page-2.html">2</a></li>
@@ -347,6 +375,7 @@
         </section>
       </div>
 
+<!-- Статья в каталоге -->
       <article class="catalog-article">
         <div class="wrapper flex-container-column">
           <h2 class="section-heading">Пара слов о перфораторах</h2>

@@ -639,18 +639,80 @@ a {
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
-  text-transform: uppercase;
 
   color: #000000;
-  background-color: #f7f3ec;
 
   margin: 0;
   padding: 12px 18px 8px;
+}
+
+.filter-heading-bg {
+  display: flex;
+
+  background-color: #f7f3ec;
+  border-radius: 4px;
+
+  text-transform: uppercase;
+
   margin-bottom: 20px;
 }
 
 .filter-heading.sorting {
   width: 700px;
+}
+
+.sorting-list {
+  display: flex;
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.sorting-items-list {
+  margin-left: 52px;
+}
+
+.sorting-item {
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  border-bottom: 1px dotted #ee3643;
+  margin-left: 70px;
+}
+
+.sorting-item:hover,
+.sorting-item:focus {
+  color: #000000;
+  border-bottom: 1px solid #ee3643;
+}
+
+.sorting-item-current,
+.sorting-item-current:hover,
+.sorting-item-current:focus {
+  border: none;
+  color: #ee3643;
+}
+
+.sorting-direction-list {
+  margin-left: 26px;
+}
+
+.sorting-direction {
+  margin-left: 20px;
+}
+
+.sorting-direction path {
+  fill: #c5c5c5;
+}
+
+.sorting-direction:hover path {
+  fill: #231F20;
+}
+
+.sorting-direction-current path,
+.sorting-direction-current:hover path {
+  fill: #ee3643;
 }
 
 .about-delivery-companies {
