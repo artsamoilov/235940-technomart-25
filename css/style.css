@@ -1081,6 +1081,10 @@ a {
   color: rgba(0, 0, 0, 0.4);
 }
 
+.filter-input:focus + label::before {
+  outline: auto 5px -webkit-focus-ring-color;
+}
+
 .filter-button {
   font: inherit;
   font-size: 13px;
