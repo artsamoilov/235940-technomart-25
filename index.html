@@ -88,35 +88,46 @@
         <h2 class="visually-hidden">Основные категории и услуги</h2>
         <ul class="main-categories">
           <div class="margin-left-annihilator">
-            <li class="main-categories-item">
+            <li class="main-categories-item item-materials">
+              <img src="img/new-flag.png" class="label-new" width="60" height="59" alt="Новинка">
               <p>Материалы</p>
-              <a href="materials.html"></a>
+              <a class="button slider-button" href="materials.html">На любой вкус</a>
             </li>
-            <li class="main-categories-item">
+            <li class="main-categories-item item-tools">
               <p>Инструмент</p>
-              <a href="tools.html"></a>
+              <a class="button slider-button" href="tools.html">На все случаи</a>
             </li>
-            <li class="main-categories-item">
+            <li class="main-categories-item item-tech">
               <p>Техника</p>
-              <a href="tech.html"></a>
+              <a class="button slider-button" href="tech.html">Для стройки</a>
             </li>
             <li class="main-categories-item slider">
+              <button class="slider-nav slider-nav-left" title="Назад"></button>
+              <button class="slider-nav slider-nav-right" title="Вперёд"></button>
+              <input class="slide-radio slide-radio-1 visually-hidden" type="radio" id="slide-radio-1" name="toggle-slider" checked>
+              <input class="slide-radio slide-radio-2 visually-hidden" type="radio" id="slide-radio-2" name="toggle-slider">
               <ul class="slider-offer">
-                <li>
-                  слайдер1
+                <label class="slide-radio-label slide-radio-label-1" for="slide-radio-1"></label>
+                <label class="slide-radio-label slide-radio-label-2" for="slide-radio-2"></label>
+                <li class="slide slide-1">
+                  <h3 class="slide-heading">Дрели</h3>
+                  <p>Соседям на радость!</p>
+                  <a class="button" href="catalog.html">Открыть каталог</a>
                 </li>
-                <li>
-                  слайдер2
+                <li class="slide slide-2">
+                  <h3 class="slide-heading">Перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                  <a class="button" href="catalog.html">Открыть каталог</a>
                 </li>
               </ul>
             </li>
-            <li class="main-categories-item">
+            <li class="main-categories-item item-discount">
               <p>Скидки 50%</p>
-              <a href="offers.html"></a>
+              <a class="button slider-button" href="offers.html">На 350 товаров</a>
             </li>
-            <li class="main-categories-item">
+            <li class="main-categories-item item-delivery">
               <p>Доставка</p>
-              <a href="delivery.html"></a>
+              <a class="button slider-button" href="delivery.html">Бесплатно</a>
             </li>
           </div>
         </ul>
@@ -270,12 +281,12 @@
           <p class="main-heading-services-paragraph">Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         </div>
 
-<!-- Слайдер -->
+<!-- Слайдер «Сервисы» -->
         <div class="wrapper">
           <div class="slider-services">
-            <input class="visually-hidden" type="radio" id="service-slide-1" name="toggle" checked>
-            <input class="visually-hidden" type="radio" id="service-slide-2" name="toggle">
-            <input class="visually-hidden" type="radio" id="service-slide-3" name="toggle">
+            <input class="visually-hidden" type="radio" id="service-slide-1" name="toggle-services-slider" checked>
+            <input class="visually-hidden" type="radio" id="service-slide-2" name="toggle-services-slider">
+            <input class="visually-hidden" type="radio" id="service-slide-3" name="toggle-services-slider">
             <div class="slider-controls flex-container-column">
               <label class="service-label-1" for="service-slide-1">Доставка</label>
               <label class="service-label-2" for="service-slide-2">Гарантия</label>
