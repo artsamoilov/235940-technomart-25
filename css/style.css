@@ -579,6 +579,7 @@ a {
 }
 
 .main-heading-services {
+  color: #000000;
   margin: 60px 0 30px;
 }
 
@@ -589,6 +590,111 @@ a {
 
 .main-section-services {
   background-color: #f4f7f9;
+}
+
+.slider-services {
+  display: flex;
+  flex-grow: 1;
+
+  margin-top: 70px;
+}
+
+.slider-services-list {
+  margin: 0;
+  padding: 0;
+
+  flex-grow: 1;
+
+  background-image: url("../img/services-delivery.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+}
+
+.slider-controls {
+  margin-bottom: 100px;
+}
+
+.slider-controls label {
+  width: 240px;
+
+  color: #ffffff;
+  
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+
+  box-shadow: inset 0px -1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+  background-color: #32425c;
+
+  padding: 20px;
+
+  cursor: pointer;
+}
+
+.slider-controls label:hover,
+.slider-controls label:focus {
+  background-color: #293449;
+}
+
+#service-slide-1:checked ~ .slider-controls .service-label-1,
+#service-slide-2:checked ~ .slider-controls .service-label-2,
+#service-slide-3:checked ~ .slider-controls .service-label-3 {
+  color: #32425c;
+  box-shadow: inset 0px -1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
+  background-color: #ffffff;
+
+  cursor: auto;
+}
+
+#service-slide-1:checked ~ .slider-services-list {
+  background-image: url("../img/services-delivery.png");
+}
+
+#service-slide-2:checked ~ .slider-services-list {
+  background-image: url("../img/services-guarantee.png");
+}
+
+#service-slide-3:checked ~ .slider-services-list {
+  background-image: url("../img/services-credit.png");
+}
+
+.service-slide {
+  display: none;
+  
+  margin: 0;
+  margin-left: 80px;
+  padding: 0;
+
+  list-style: none;
+}
+
+#service-slide-1:checked ~ .slider-services-list .service-slide-item-1,
+#service-slide-2:checked ~ .slider-services-list .service-slide-item-2,
+#service-slide-3:checked ~ .slider-services-list .service-slide-item-3 {
+  display: block;
+}
+
+.service-slide-heading {
+  color: #32425c;
+  
+  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+
+  margin: 0;
+  margin-bottom: 30px;
+
+  text-transform: uppercase;
+}
+
+.button.service-slider-button {
+  display: block;
+
+  width: 195px;
+
+  margin-top: 30px;
 }
 
 .main-about {
