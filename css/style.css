@@ -757,10 +757,12 @@ a {
 }
 
 .slide-radio-1:checked ~ .slider-offer {
+  background-color: #60554c;
   background-image: url("../img/slide-1.jpg");
 }
 
 .slide-radio-2:checked ~ .slider-offer {
+  background-color: #60554c;
   background-image: url("../img/slide-2.jpg");
 }
 
@@ -1080,6 +1082,7 @@ a {
 }
 
 .map-popup {
+  background-color: #eeeae3;
   margin: 32px 0;
 }
 
@@ -2263,6 +2266,7 @@ a {
 .modal-map {
   display: none;
 
+  background-color: #eeeae3;
   box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
 
   width: 940px;
