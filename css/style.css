@@ -992,9 +992,9 @@ a {
   background-color: #293449;
 }
 
-#service-slide-1:checked ~ .slider-controls .service-label-1,
-#service-slide-2:checked ~ .slider-controls .service-label-2,
-#service-slide-3:checked ~ .slider-controls .service-label-3 {
+.service-slide-1:checked ~ .slider-controls .service-label-1,
+.service-slide-2:checked ~ .slider-controls .service-label-2,
+.service-slide-3:checked ~ .slider-controls .service-label-3 {
   color: #32425c;
   box-shadow: inset 0px -1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
   background-color: #ffffff;
@@ -1002,15 +1002,15 @@ a {
   cursor: auto;
 }
 
-#service-slide-1:checked ~ .slider-services-list {
+.service-slide-1:checked ~ .slider-services-list {
   background-image: url("../img/services-delivery.png");
 }
 
-#service-slide-2:checked ~ .slider-services-list {
+.service-slide-2:checked ~ .slider-services-list {
   background-image: url("../img/services-guarantee.png");
 }
 
-#service-slide-3:checked ~ .slider-services-list {
+.service-slide-3:checked ~ .slider-services-list {
   background-image: url("../img/services-credit.png");
 }
 
@@ -1024,9 +1024,9 @@ a {
   list-style: none;
 }
 
-#service-slide-1:checked ~ .slider-services-list .service-slide-item-1,
-#service-slide-2:checked ~ .slider-services-list .service-slide-item-2,
-#service-slide-3:checked ~ .slider-services-list .service-slide-item-3 {
+.service-slide-1:checked ~ .slider-services-list .service-slide-item-1,
+.service-slide-2:checked ~ .slider-services-list .service-slide-item-2,
+.service-slide-3:checked ~ .slider-services-list .service-slide-item-3 {
   display: block;
 }
 
