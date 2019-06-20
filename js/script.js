@@ -100,6 +100,7 @@ var popupSuccess = document.querySelector(".modal-success");
 
 if (popupSuccess) {
   var closeSuccess = popupSuccess.querySelector(".modal-close");
+  var continueShopping = popupSuccess.querySelector(".button-continue");
 
   for (i=0; i<linkSuccess.length; i++) {
     linkSuccess[i].addEventListener("click", function (evt) {
@@ -109,6 +110,11 @@ if (popupSuccess) {
   };
 
   closeSuccess.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    popupSuccess.classList.remove("modal-show");
+  });
+
+  continueShopping.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupSuccess.classList.remove("modal-show");
   });
