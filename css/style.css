@@ -68,7 +68,10 @@ a {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 17px;
   line-height: 18px;
+
   background-color: #f4f7f9;
+
+  padding-bottom: 60px;
 }
 
 .header-top {
@@ -135,6 +138,8 @@ a {
 
   background: #293449;
   border: none;
+
+  color: #ffffff;
 }
 
 .search-field::placeholder {
@@ -172,14 +177,30 @@ a {
   position: relative;
 
   width: 150px;
-  padding-left: 18px;
 
   color: #ffffff;
+}
+
+.header-bookmarks {
+  padding-left: 44px;
+}
+
+.header-cart {
+  padding-left: 50px;
 }
 
 .header-link:hover,
 .header-link:focus {
   background-color: #212a3a;
+}
+
+.header-link:hover span::before,
+.header-link:focus span::before {
+  opacity: 1;
+}
+
+.header-link:active span::before {
+  opacity: 0.5;
 }
 
 .header-link:active {
@@ -211,11 +232,37 @@ a {
 }
 
 .bookmarks {
-  padding-left: 12px;
+  position: relative;
+}
+
+.bookmarks::before {
+  position: absolute;
+  content: "";
+
+  height: 16px;
+  width: 14px;
+
+  left: -27px;
+
+  background-image: url("../img/icon-bookmark.svg");
+  opacity: 0.3;
 }
 
 .cart {
-  padding-left: 17px;
+  position: relative;
+}
+
+.cart::before {
+  position: absolute;
+  content: "";
+
+  height: 15px;
+  width: 15px;
+
+  left: -32px;
+
+  background-image: url("../img/icon-cart.svg");
+  opacity: 0.3;
 }
 
 .header-link.header-checkout {
@@ -348,7 +395,7 @@ a {
 
 .account-button:hover,
 .account-button:focus {
-  color: #EE3643;
+  color: #ee3643;
 }
 
 .account-button:active {
@@ -359,9 +406,24 @@ a {
   position: relative;
 }
 
-.account-button-login,
-.account-button-logout {
+.account-button-login {
   padding-left: 48px;
+}
+
+.account-button-logged {
+  display: flex;
+
+  font-size: 21px;
+  line-height: 21px;
+  background-color: #ffffff;
+
+  color: #000000;
+}
+
+.logged-profile {
+  padding: 12px 24px;
+  margin-left: 12px;
+  padding-left: 36px;
 }
 
 .account-enter::before {
@@ -378,7 +440,7 @@ a {
   opacity: 0.3;
 }
 
-.account-logout::before {
+.account-logged::before {
   position: absolute;
   content: "";
 
@@ -392,6 +454,10 @@ a {
   opacity: 0.3;
 }
 
+.account-logout {
+  font-size: 0;
+}
+
 .account-logout::after {
   position: absolute;
   content: "";
@@ -399,22 +465,34 @@ a {
   width: 21px;
   height: 17px;
 
-  top: 4px;
-  right: -56px;
+  top: -3px;
+  right: -32px;
 
   background-image: url("../img/icon-logout.svg");
   opacity: 0.3;
 }
 
+.logged-profile:hover .account,
+.logged-profile:focus .account {
+  color: #ee3643;
+}
+
+.logged-profile:active .account {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .account-button:hover .account::before,
 .account-button:focus .account::before,
-.account-button:hover .account::after,
-.account-button:focus .account::after {
+.logged-profile:hover .account::before,
+.logged-profile:focus .account::before,
+.account-button-logout:hover .account::after,
+.account-button-logout:focus .account::after {
   opacity: 1;
 }
 
 .account-button:active .account::before,
-.account-button:active .account::after {
+.logged-profile:active .account::before,
+.account-button-logout:active .account::after {
   opacity: 0.3;
 }
 
@@ -423,15 +501,14 @@ a {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-}
 
-.account-logout {
-  padding-right: auto;
+  width: 300px;
+  margin-left: 10px;
 }
 
 .account-options {
   margin-top: 7px;
-  margin-left: 15px;
+  margin-left: 4px;
 }
 
 .account-option-link {
@@ -478,7 +555,6 @@ a {
 
   width: 940px;
   min-height: 60px;
-  margin-bottom: 60px;
 
   display: flex;
 }
@@ -495,12 +571,12 @@ a {
 }
 
 .header-navigation-items li {
-  padding: 18px 0 22px;
+  padding: 19px 0 22px;
 }
 
 .header-navigation-items a {
   color: #ffffff;
-  padding: 18px 30px 22px;
+  padding: 18px 30px 21px;
 }
 
 .header-navigation-items a:hover,
@@ -626,6 +702,7 @@ a {
   position: absolute; 
 
   top: 201px;
+  left: -10px;
 
   width: 620px;
   height: 266px;
@@ -669,8 +746,8 @@ a {
   left: 315px;
 }
 
-.slide-radio-1:checked ~ .slider-offer .slide-radio-label-1::before,
-.slide-radio-2:checked ~ .slider-offer .slide-radio-label-2::before {
+.slide-radio-1:checked ~ .slide-radio-label-1::before,
+.slide-radio-2:checked ~ .slide-radio-label-2::before {
   display: block;
 }
 
@@ -707,10 +784,7 @@ a {
   position: absolute;
 
   margin: 0;
-  padding: 0;
-
-  width: 40px;
-  height: 40px;
+  padding: 20px;
 
   top: 114px;
 
@@ -778,8 +852,10 @@ a {
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
+}
 
-  margin-bottom: auto;
+.slide .button {
+  margin-top: auto;
 }
 
 .slide-heading {
@@ -1538,7 +1614,7 @@ a {
 .catalog-list {
   display: flex;
 
-  width: 700px;
+  width: 720px;
 
   list-style: none;
 
@@ -1547,8 +1623,8 @@ a {
   padding-bottom: 32px;
 }
 
-.catalog-list-popular {
-  width: 940px;
+.catalog-list.catalog-list-popular {
+  width: 960px;
   padding-bottom: 0;
 }
 
@@ -1626,8 +1702,40 @@ a {
   min-height: 143px;
 
   display: flex;
+
   justify-content: center;
-  align-items: center;
+}
+
+.brand-bosch {
+  margin-top: 52px;
+}
+
+.brand-makita {
+  margin-top: 48px;
+}
+
+.brand-dewalt {
+  margin-top: 46px;
+}
+
+.brand-interskol {
+  margin-top: 54px;
+}
+
+.brand-hitachi {
+  margin-top: 56px;
+}
+
+.brand-lg {
+  margin-top: 33px;
+}
+
+.brand-aeg {
+  margin-top: 21px;
+}
+
+.brand-metabo {
+  margin-top: 32px;
 }
 
 .catalog-item-price {
@@ -1684,6 +1792,9 @@ a {
   opacity: 0;
 
   position: absolute;
+
+  top: 0;
+
   width: 218px;
   height: 170px;
 
@@ -1739,11 +1850,23 @@ a {
   border: 3px solid rgba(50, 66, 92, 0.3);
 }
 
-.label-new {
+.item-new {
+  position: relative;
+}
+
+.item-new::after {
   position: absolute;
-  z-index: 1;
-  right: 0;
+  content: "";
+
+  width: 60px;
+  height: 59px;
+
   top: 0;
+  right: 0;
+
+  background-image: url("../img/new-flag.png");
+  background-position: top right;
+  background-repeat: no-repeat;
 }
 
 .pagination-list {
@@ -1810,7 +1933,6 @@ a {
 .footer-logo {
   width: 220px;
   height: 68px;
-  padding: auto 0;
   padding-bottom: 4px;
 
   display: flex;
@@ -1949,6 +2071,36 @@ a {
 }
 
 /* Стилизация модальных окон */
+@keyframes zoom-in {
+  0% {
+    transform: scale(0);
+  }
+
+  70% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  20%,
+  60% {
+    transform: translateX(-10px);
+  }
+
+  40%,
+  80% {
+    transform: translateX(10px);
+  }
+}
 
 .modal {
   background-color: #ffffff;
@@ -1968,6 +2120,8 @@ a {
   position: absolute;
   top: 9px;
   right: 9px;
+
+  z-index: 3;
 
   font-size: 0;
 
@@ -2047,14 +2201,14 @@ a {
   justify-content: space-between;
 }
 
-.write-form .wrapper {
+.write-form .flex-container-column {
   flex-direction: column;
   padding: 0;
   margin-bottom: 18px;
   width: 220px;
 }
 
-.wrapper.full-width {
+.flex-container-column.full-width {
   width: 100%;
   margin-bottom: 0;
 }
@@ -2072,6 +2226,8 @@ a {
 
   padding: 8px 16px;
   width: auto;
+
+  resize: vertical;
 
   font: inherit;
   font-size: 13px;
@@ -2116,9 +2272,21 @@ a {
   margin-top: -223px;
 }
 
+.modal-map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
 .modal-map p {
   margin: 0;
   padding: 0;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .button-continue {
@@ -2170,4 +2338,14 @@ a {
 
 .modal-success-buttons .button {
   width: 220px;
+}
+
+.modal-show {
+  display: block;
+
+  animation: zoom-in 0.25s;
+}
+
+.modal-error {
+  animation: shake 0.3s;
 }
